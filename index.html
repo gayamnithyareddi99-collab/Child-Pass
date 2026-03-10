@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Child Pass Platform</title>
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#0b1d3a;
+padding:18px 8%;
+color:white;
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+}
+
+.nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:20px;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+
+/* HERO */
+
+.hero{
+padding:140px 8%;
+background:white;
+}
+
+.hero-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero h1{
+font-size:46px;
+color:#0b1d3a;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#444;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.hero-btn{
+background:#0b1d3a;
+color:white;
+padding:12px 22px;
+text-decoration:none;
+border-radius:6px;
+}
+
+/* HERO IMAGE */
+
+.hero img{
+width:100%;
+border-radius:10px;
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* ABOUT */
+
+.about{
+padding:120px 8%;
+background:#0b1d3a;
+color:white;
+}
+
+.about-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.about h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.about p{
+line-height:1.7;
+color:#d8d8d8;
+}
+
+/* FEATURES */
+
+.features{
+padding:120px 8%;
+background:white;
+text-align:center;
+}
+
+.features h2{
+font-size:36px;
+margin-bottom:60px;
+color:#0b1d3a;
+}
+
+.feature-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.feature{
+background:#f4f6fa;
+padding:30px;
+border-radius:10px;
+}
+
+.feature h3{
+margin-bottom:10px;
+color:#0b1d3a;
+}
+
+/* CONTACT */
+
+.contact{
+padding:120px 8%;
+background:black;
+color:white;
+text-align:center;
+}
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+max-width:500px;
+padding:12px;
+margin:10px 0;
+border:none;
+}
+
+.contact button{
+padding:12px 25px;
+background:#0b1d3a;
+color:white;
+border:none;
+margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-container,
+.about-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">Child Pass</div>
+
+<nav class="nav-links">
+<a href="#">Home</a>
+<a href="#">Platform</a>
+<a href="#">Process</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div>
+
+<h1>Digital Child Pass Platform</h1>
+
+<p>
+A secure digital platform designed to simplify the
+management of child passes and identity verification.
+The system helps organizations manage registrations,
+permissions and access with greater efficiency.
+</p>
+
+<a href="#" class="hero-btn">Get Started</a>
+
+</div>
+
+<img src="hero.jpeg">
+
+</div>
+
+</section>
+<section id="about-section">
+
+<style>
+#about-section{
+background:linear-gradient(135deg,#0b1d3a,#162b55);
+padding:80px 8%;
+font-family:Arial, Helvetica, sans-serif;
+color:white;
+}
+
+.about-wrapper{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+.about-left{
+flex:1;
+min-width:300px;
+}
+
+.about-left h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about-left p{
+color:#d8e0f0;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.feature-box{
+background:white;
+color:#0b1d3a;
+padding:12px 18px;
+border-radius:8px;
+font-size:14px;
+font-weight:500;
+text-align:center;
+transition:0.3s;
+}
+
+.feature-box:hover{
+transform:scale(1.05);
+background:#f1f5ff;
+}
+
+.about-right{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.founder-card{
+background:white;
+color:#333;
+padding:35px;
+border-radius:12px;
+max-width:360px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.founder-card:hover{
+transform:translateY(-5px);
+}
+
+.founder-card h3{
+margin-bottom:10px;
+color:#0b1d3a;
+font-size:20px;
+}
+
+.founder-divider{
+width:60px;
+height:3px;
+background:#0b1d3a;
+margin-bottom:20px;
+border-radius:2px;
+}
+
+.founder-card p{
+font-size:14px;
+line-height:1.6;
+margin-bottom:15px;
+}
+
+.founder-btn{
+display:inline-block;
+padding:10px 20px;
+background:#0b1d3a;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+transition:all 0.3s ease;
+}
+
+.founder-btn:hover{
+background:#0b1d3a;
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+
+
+<div class="about-wrapper">
+
+<div class="about-left">
+
+<h2>About Child Pass</h2>
+
+<p>
+Child Pass is a secure digital identity platform designed to help
+schools, institutions and support organizations manage child
+identity records through a unified digital system. The platform
+integrates information from multiple trusted sources to create
+a structured and reliable digital identity for every child.
+</p>
+
+<p>
+By introducing a portable digital child passport, Child Pass
+enables institutions to securely access and manage verified
+child records across different educational environments.
+This approach reduces fragmented data systems, improves
+collaboration between organizations and ensures children
+receive consistent support throughout their educational journey.
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-box">Unified Child Identity</div>
+<div class="feature-box">Secure Data Verification</div>
+<div class="feature-box">Digital Child Passport</div>
+<div class="feature-box">Cross-Institution Access</div>
+
+</div>
+
+</div>
+
+
+<div class="about-right">
+
+<div class="founder-card">
+
+<h3>Founder</h3>
+
+<div class="founder-divider"></div>
+
+<p>
+Child Pass was founded by <strong>Shafaq</strong> with the vision
+of transforming how educational institutions manage and share
+child identity information. The platform focuses on creating
+a secure digital infrastructure that connects schools,
+organizations and support services through intelligent
+identity technology.
+</p>
+
+<p>
+Through innovation, security and data governance principles,
+Child Pass aims to simplify identity management, enhance
+collaboration between institutions and ensure that every
+child receives the right support at the right time.
+</p>
+
+<a href="#" class="founder-btn">LinkedIn</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const features=document.querySelectorAll(".feature-box");
+
+features.forEach(box=>{
+box.addEventListener("mouseenter",()=>{
+box.style.transform="scale(1.05)";
+});
+
+box.addEventListener("mouseleave",()=>{
+box.style.transform="scale(1)";
+});
+
+});
+
+</script>
+
+</section>
+<section class="process-section" id="process">
+
+<div class="process-container">
+
+<h2 class="process-title">Child Pass Process</h2>
+
+<p class="process-sub">
+Child Pass follows a structured process that enables organizations
+to create secure digital identities, manage verification workflows
+and control access through a unified and reliable platform.
+</p>
+
+<div class="process-grid">
+
+<!-- STEP 01 -->
+
+<div class="process-card">
+
+<img src="process1.png" class="process-img">
+
+<div class="step">Step 01</div>
+
+<h3>Identity Data Integration</h3>
+
+<p>
+Child Pass collects and integrates child identity and educational
+records from multiple trusted systems such as school databases,
+registration platforms, SEND documentation systems and verified
+institutional records. The platform consolidates fragmented data
+into a single unified child identity profile that serves as the
+foundation for secure digital identity management.
+</p>
+
+</div>
+
+
+<!-- STEP 02 -->
+
+<div class="process-card">
+
+<img src="process2.png" class="process-img">
+
+<div class="step">Step 02</div>
+
+<h3>Secure Verification & Data Standardization</h3>
+
+<p>
+Once identity information is collected, Child Pass verifies and
+standardizes the data through secure validation processes. This
+ensures that records are accurate, authorized and compliant with
+data protection standards such as GDPR and DPA regulations.
+Verified data is then structured into a consistent identity model
+that can be safely used across institutions and systems.
+</p>
+
+</div>
+
+
+<!-- STEP 03 -->
+
+<div class="process-card">
+
+<img src="process3.png" class="process-img">
+
+<div class="step">Step 03</div>
+
+<h3>Digital Child Passport Creation</h3>
+
+<p>
+After verification, the platform generates a secure digital Child
+Pass that acts as a portable identity passport for the child. The
+passport securely carries important educational, developmental and
+support information so that schools, support services and
+authorized stakeholders can instantly access the data required to
+provide the right support without delays during transitions
+between institutions.
+</p>
+
+</div>
+
+
+<!-- STEP 04 -->
+
+<div class="process-card">
+
+<img src="process4.png" class="process-img">
+
+<div class="step">Step 04</div>
+
+<h3>Access Governance & Platform Monitoring</h3>
+
+<p>
+Child Pass provides centralized monitoring tools that allow
+organizations to manage permissions, track data access and
+analyze platform usage across the ecosystem. Through secure
+dashboards and governance controls, institutions can ensure
+transparent data sharing, maintain compliance and improve
+operational efficiency while protecting sensitive child
+information.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.process-section{
+padding:120px 8%;
+background:#f8f9fc;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+/* TITLE */
+
+.process-title{
+font-size:36px;
+margin-bottom:10px;
+color:#0b1d3a;
+}
+
+/* DIVIDER */
+
+.process-title::after{
+content:"";
+display:block;
+width:70px;
+height:3px;
+background:#0b1d3a;
+margin:15px auto 0;
+border-radius:3px;
+}
+
+/* SUBTEXT */
+
+.process-sub{
+max-width:700px;
+margin:auto;
+margin-bottom:70px;
+color:#555;
+line-height:1.7;
+}
+
+/* GRID */
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+/* CARD */
+
+.process-card{
+background:white;
+padding:25px;
+border-radius:12px;
+border:2px solid #e7edf6;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+text-align:left;
+transition:0.35s;
+position:relative;
+overflow:hidden;
+}
+
+/* TOP ACCENT */
+
+.process-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:4px;
+background:#0b1d3a;
+}
+
+/* HOVER */
+
+.process-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+border-color:#0b1d3a;
+}
+
+/* IMAGE */
+
+.process-img{
+width:100%;
+height:140px;
+object-fit:cover;
+border-radius:6px;
+margin-bottom:15px;
+transition:0.3s;
+}
+
+.process-card:hover .process-img{
+transform:scale(1.05);
+}
+
+/* STEP BADGE */
+
+.step{
+display:inline-block;
+background:#0b1d3a;
+color:white;
+padding:4px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+/* TEXT */
+
+.process-card h3{
+margin-bottom:10px;
+color:#0b1d3a;
+font-size:18px;
+}
+
+.process-card p{
+font-size:14px;
+line-height:1.6;
+color:#555;
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.process-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.process-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+<section class="platform-section" id="platform">
+
+<div class="platform-container">
+
+<h2 class="platform-title">Child Pass Platform</h2>
+
+<p class="platform-sub">
+Child Pass is a secure digital infrastructure designed to unify
+education, health and care records into a single digital passport.
+</p>
+
+<div class="platform-divider"></div>
+
+
+<div class="platform-grid">
+
+<!-- CARD 1 -->
+
+<div class="platform-card">
+<img src="platform1.png" class="platform-img">
+<h3>Digital Child Passport</h3>
+
+<p class="short-text">
+A portable digital record that follows the child across institutions.
+</p>
+
+<p class="more-text">
+Child Pass creates a unified digital passport that stores
+education, health and care information in one secure
+profile. This allows authorized organizations to access
+critical data when a child moves between schools
+or support services.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="platform-card">
+<img src="platform2.png" class="platform-img">
+<h3>Unified Student Records</h3>
+
+<p class="short-text">
+Centralized management of educational and developmental data.
+</p>
+
+<p class="more-text">
+The platform consolidates fragmented student information
+including learning plans, assessments and support
+requirements into a single accessible system that
+reduces administrative complexity.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="platform-card">
+<img src="platform3.png" class="platform-img">
+<h3>Secure Identity Engine</h3>
+
+<p class="short-text">
+Reliable identity verification for every student profile.
+</p>
+
+<p class="more-text">
+Child Pass uses a canonical identity engine that anchors
+a child’s digital identity and ensures all records are
+accurately linked to the correct profile across systems
+and organizations.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="platform-card">
+<img src="platform4.png" class="platform-img">
+<h3>Institutional Data Sharing</h3>
+
+<p class="short-text">
+Secure data exchange between schools and authorities.
+</p>
+
+<p class="more-text">
+The platform enables trusted collaboration between
+schools, councils and support organizations through
+secure access permissions and controlled data sharing
+mechanisms.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="platform-card">
+<img src="platform5.png" class="platform-img">
+<h3>SEND Support Integration</h3>
+
+<p class="short-text">
+Support tools for children with special educational needs.
+</p>
+
+<p class="more-text">
+Child Pass integrates SEND information such as
+Education Health Care Plans (EHCPs) and specialized
+learning strategies so educators can provide consistent
+support without delays.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="platform-card">
+<img src="platform6.png" class="platform-img">
+<h3>Secure Data Infrastructure</h3>
+
+<p class="short-text">
+Enterprise-grade protection for sensitive student data.
+</p>
+
+<p class="more-text">
+Built with modern security architecture, Child Pass
+protects sensitive educational and healthcare
+information while maintaining strict compliance
+with data protection standards.
+</p>
+
+<button class="learn-btn">Learn More</button>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.platform-section{
+padding:120px 8%;
+background:#0b1d3a;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+color:white;
+}
+
+/* TITLE */
+
+.platform-title{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.platform-sub{
+max-width:650px;
+margin:auto;
+margin-bottom:20px;
+color:#cfd6e6;
+line-height:1.7;
+}
+
+/* DIVIDER */
+
+.platform-divider{
+width:80px;
+height:3px;
+background:white;
+margin:30px auto 50px auto;
+}
+
+/* GRID */
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+/* CARD */
+
+.platform-card{
+background:white;
+color:#333;
+padding:25px;
+border-radius:10px;
+text-align:left;
+transition:0.35s;
+}
+
+.platform-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+
+.platform-img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+/* TEXT */
+
+.short-text{
+color:#555;
+margin-bottom:10px;
+}
+
+.more-text{
+display:none;
+color:#555;
+font-size:14px;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+/* BUTTON */
+
+.learn-btn{
+background:#0b1d3a;
+color:white;
+border:none;
+padding:10px 18px;
+cursor:pointer;
+font-weight:600;
+border-radius:5px;
+}
+
+.learn-btn:hover{
+background:black;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.platform-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const buttons=document.querySelectorAll(".learn-btn");
+
+buttons.forEach(btn=>{
+
+btn.addEventListener("click",function(){
+
+const card=this.parentElement;
+const more=card.querySelector(".more-text");
+
+if(more.style.display==="block"){
+
+more.style.display="none";
+this.innerText="Learn More";
+
+}else{
+
+more.style.display="block";
+this.innerText="Show Less";
+
+}
+
+});
+
+});
+
+</script>
+<section class="pricing-section" id="pricing">
+
+<div class="pricing-container">
+
+<h2 class="pricing-title">Flexible Pricing Plans</h2>
+
+<p class="pricing-subtitle">
+Choose the plan that best fits your organization.
+Child Pass provides scalable solutions designed
+to support teams of all sizes.
+</p>
+
+<div class="pricing-divider"></div>
+
+
+<div class="pricing-grid">
+
+<!-- STARTER -->
+
+<div class="pricing-card">
+
+<h3>Starter</h3>
+
+<p class="price">Basic Plan</p>
+
+<ul>
+<li>✔ Secure platform access</li>
+<li>✔ Basic identity verification</li>
+<li>✔ Email support</li>
+<li>✔ Standard features</li>
+</ul>
+
+<button onclick="goContact()">Get Started</button>
+
+</div>
+
+
+<!-- PRO -->
+
+<div class="pricing-card highlight">
+
+<div class="tag">Most Popular</div>
+
+<h3>Pro</h3>
+
+<p class="price">Professional Plan</p>
+
+<ul>
+<li>✔ Advanced verification tools</li>
+<li>✔ Priority support</li>
+<li>✔ Analytics dashboard</li>
+<li>✔ Team collaboration features</li>
+</ul>
+
+<button onclick="goContact()">Start Pro</button>
+
+</div>
+
+
+<!-- PREMIUM -->
+
+<div class="pricing-card">
+
+<h3>Premium</h3>
+
+<p class="price">Enterprise Plan</p>
+
+<ul>
+<li>✔ Full platform capabilities</li>
+<li>✔ Advanced security tools</li>
+<li>✔ Custom integrations</li>
+<li>✔ Dedicated support</li>
+</ul>
+
+<button onclick="goContact()">Contact Sales</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.pricing-section{
+padding:110px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+/* TITLE */
+
+.pricing-title{
+font-size:36px;
+color:#0b1d3a;
+margin-bottom:10px;
+}
+
+/* SUBTITLE */
+
+.pricing-subtitle{
+max-width:650px;
+margin:auto;
+color:#555;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+/* DIVIDER */
+
+.pricing-divider{
+width:80px;
+height:3px;
+background:#0b1d3a;
+margin:25px auto 50px auto;
+border-radius:3px;
+}
+
+/* GRID */
+
+.pricing-grid{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+/* CARD */
+
+.pricing-card{
+border:2px solid #e5e5e5;
+padding:35px 25px;
+border-radius:12px;
+transition:0.4s;
+background:white;
+position:relative;
+}
+
+/* CARD HOVER */
+
+.pricing-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.1);
+border-color:#0b1d3a;
+}
+
+/* MIDDLE CARD */
+
+.highlight{
+border:2px solid #0b1d3a;
+transform:scale(1.03);
+}
+
+/* TAG */
+
+.tag{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#0b1d3a;
+color:white;
+padding:5px 14px;
+font-size:12px;
+border-radius:20px;
+font-weight:600;
+}
+
+/* TITLE */
+
+.pricing-card h3{
+font-size:22px;
+margin-bottom:10px;
+color:#0b1d3a;
+}
+
+/* PRICE */
+
+.price{
+font-weight:600;
+margin-bottom:18px;
+color:#333;
+}
+
+/* LIST */
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:25px;
+text-align:left;
+}
+
+.pricing-card li{
+margin-bottom:10px;
+color:#555;
+}
+
+/* BUTTON */
+
+.pricing-card button{
+background:#0b1d3a;
+color:white;
+border:none;
+padding:12px 22px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:1px;
+transition:0.3s;
+border-radius:6px;
+}
+
+/* BUTTON HOVER */
+
+.pricing-card button:hover{
+background:black;
+transform:scale(1.07);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+.pricing-section{
+padding:90px 6%;
+}
+
+.highlight{
+transform:none;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+function goContact(){
+
+document.querySelector("#contact").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+<section class="faq-section" id="faq">
+
+<div class="faq-container">
+
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<p class="faq-subtitle">
+Find answers to common questions about the Child Pass
+platform, features and how organizations can use the
+system effectively.
+</p>
+
+<div class="faq-divider"></div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+What is Child Pass?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Child Pass is a digital platform designed to help
+organizations manage identity verification and
+access processes efficiently through a secure
+and streamlined system.
+</p>
+</div>
+</div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+Who can use the Child Pass platform?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+The platform is designed for organizations that
+require reliable identity verification and access
+management systems for users, members or visitors.
+</p>
+</div>
+</div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+How do organizations get started with Child Pass?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Getting started is simple. Organizations can contact
+the team through the contact section and receive
+guidance on onboarding, setup and platform access.
+</p>
+</div>
+</div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+Is Child Pass designed with security in mind?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. The platform is built with modern security
+principles to ensure that identity data and
+verification processes remain protected and reliable.
+</p>
+</div>
+</div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+Can the platform support large organizations?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+Yes. Child Pass is built with scalable architecture
+so it can support both small teams and large
+organizations with growing operational needs.
+</p>
+</div>
+</div>
+
+
+<div class="faq-item">
+<button class="faq-question">
+What benefits does Child Pass provide to organizations?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+<p>
+The platform helps organizations simplify verification
+processes, improve operational efficiency and manage
+access in a secure and structured environment.
+</p>
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.faq-section{
+background:#0b1d3a;
+padding:100px 8%;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* CONTAINER */
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+/* TITLE */
+
+.faq-title{
+text-align:center;
+color:white;
+font-size:34px;
+margin-bottom:10px;
+}
+
+/* SUBTITLE */
+
+.faq-subtitle{
+text-align:center;
+color:#cfd6e6;
+max-width:650px;
+margin:auto;
+margin-bottom:25px;
+line-height:1.6;
+}
+
+/* DIVIDER */
+
+.faq-divider{
+width:80px;
+height:3px;
+background:white;
+margin:0 auto 40px auto;
+border-radius:3px;
+}
+
+/* FAQ ITEM */
+
+.faq-item{
+background:white;
+margin-bottom:15px;
+border-radius:6px;
+overflow:hidden;
+}
+
+/* QUESTION */
+
+.faq-question{
+width:100%;
+padding:16px 18px;
+border:none;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* ANSWER */
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:0.3s;
+padding:0 18px;
+}
+
+.faq-answer p{
+margin:15px 0;
+color:#444;
+line-height:1.6;
+}
+
+/* ACTIVE */
+
+.faq-item.active .faq-answer{
+max-height:200px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.faq-section{
+padding:80px 6%;
+}
+
+.faq-title{
+font-size:28px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+
+const btn = item.querySelector(".faq-question");
+
+btn.addEventListener("click", () => {
+
+item.classList.toggle("active");
+
+});
+
+});
+
+</script>
+<section class="contact-section" id="contact">
+
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+
+<div class="contact-left">
+
+<h2>We are here to help!</h2>
+
+<p>
+Let us know how we can best support you. Use the contact
+form to reach our team and learn more about the
+Child Pass platform and services.
+</p>
+
+<p>
+Our team is ready to assist you and guide you through
+getting started with secure digital solutions.
+</p>
+
+</div>
+
+
+<!-- RIGHT FORM -->
+
+<div class="contact-right">
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="ee4a070f-85a4-49e8-ba2b-aaf61e0aad40">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="email" name="email" placeholder="Email" required>
+
+<input type="tel" name="phone" placeholder="Phone number">
+
+<textarea name="message" rows="4" placeholder="Comment"></textarea>
+
+<button type="submit">SEND MESSAGE</button>
+
+<p class="note">
+Your information will only be used to respond to your request.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.contact-section{
+padding:100px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* CONTAINER */
+
+.contact-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+/* LEFT */
+
+.contact-left h2{
+font-size:34px;
+color:#0b1d3a;
+margin-bottom:15px;
+}
+
+.contact-left p{
+color:black;
+line-height:1.7;
+margin-bottom:12px;
+max-width:420px;
+}
+
+
+/* FORM */
+
+.contact-right input,
+.contact-right textarea{
+width:100%;
+padding:12px;
+margin-bottom:14px;
+border:1px solid #ddd;
+font-size:14px;
+outline:none;
+}
+
+/* BUTTON */
+
+.contact-right button{
+background:#0b1d3a;
+color:white;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.contact-right button:hover{
+background:black;
+}
+
+/* NOTE */
+
+.note{
+font-size:12px;
+color:#777;
+margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.contact-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.contact-left p{
+margin:auto;
+}
+
+.contact-logo{
+margin:auto;
+margin-bottom:20px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+console.log("Child Pass Contact Section Loaded");
+
+</script>
+<!-- FOOTER SECTION -->
+
+<footer id="footer">
+
+<style>
+
+#footer{
+background:linear-gradient(135deg,#0b1d3a,#142b55);
+color:white;
+padding:70px 8% 30px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+gap:50px;
+margin-bottom:40px;
+}
+
+.footer-col{
+flex:1;
+min-width:220px;
+}
+
+.footer-logo{
+font-size:20px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.footer-col h3{
+margin-bottom:15px;
+font-size:18px;
+position:relative;
+}
+
+.footer-col h3::after{
+content:"";
+width:40px;
+height:3px;
+background:#c7d1ea;
+position:absolute;
+left:0;
+bottom:-6px;
+border-radius:2px;
+}
+
+.footer-col p{
+font-size:14px;
+line-height:1.7;
+color:#d4dcf0;
+margin-top:15px;
+}
+
+.footer-links{
+list-style:none;
+padding:0;
+margin-top:10px;
+}
+
+.footer-links li{
+margin-bottom:10px;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#d4dcf0;
+font-size:14px;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:white;
+padding-left:6px;
+}
+
+.footer-social{
+margin-top:15px;
+}
+
+.footer-social a{
+display:inline-block;
+margin-right:12px;
+font-size:16px;
+color:white;
+opacity:0.8;
+transition:0.3s;
+}
+
+.footer-social a:hover{
+opacity:1;
+transform:translateY(-3px);
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,0.2);
+margin-top:30px;
+padding-top:15px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+font-size:13px;
+color:#c7d1ea;
+}
+
+.scroll-top{
+background:#0b1d3a;
+border:none;
+width:35px;
+height:35px;
+border-radius:50%;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.scroll-top:hover{
+transform:translateY(-3px);
+}
+
+</style>
+
+
+<div class="footer-container">
+
+<!-- COMPANY INFO -->
+
+<div class="footer-col">
+
+<div class="footer-logo">Child Pass</div>
+
+<p>
+Child Pass is a secure digital identity platform that helps
+schools and organizations manage child records through a
+unified digital ecosystem.
+</p>
+
+</div>
+
+
+<!-- PLATFORM -->
+
+<div class="footer-col">
+
+<h3>Platform</h3>
+
+<ul class="footer-links">
+<li><a href="#">Home</a></li>
+<li><a href="#">Platform</a></li>
+<li><a href="#">How It Works</a></li>
+<li><a href="#">Pricing</a></li>
+</ul>
+
+</div>
+
+
+<!-- COMPANY -->
+
+<div class="footer-col">
+
+<h3>Company</h3>
+
+<ul class="footer-links">
+<li><a href="#">About</a></li>
+<li><a href="#">FAQ</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>© 2026 Child Pass Platform. All rights reserved.</p>
+
+<button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+</div>
+
+
+<script>
+
+function scrollToTop(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+</script>
+
+</footer>
+</body>
+</html>
